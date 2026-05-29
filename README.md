@@ -1,97 +1,81 @@
-# Workout Tracker App
 
-A simple full-stack Workout Tracker application built using the MERN stack.
-Users can create, view, and delete workout records with a clean and responsive UI.
-## Features
+#  Workout Buddy App
 
-* Add new workouts
-* View all workouts
-* Delete workouts
-* Responsive design
-* MongoDB database connection
-
-## Tech Stack
-
-### Frontend
-
-* React.js
-* CSS
-* Context API
-
-### Backend
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-
-## Folder Structure
-
-AyushPardeshi_task(37)
-
- backend/
-    controllers/
-    models/
-    routes/
-    server.js
-    package.json
-
-frontend/
-src/
-    components/
-    pages/
-    package.json
-    index.css
-    app.js
+Workout Buddy is a full-stack MERN application that helps users track their daily workouts in a simple and organized way.  
+Users can create an account, log in, and manage their workouts securely.
 
 
-## Installation
+##  Features
 
-### Clone the Repository
+- User signup and login with authentication
+- Add new workouts
+- View all workouts (user-specific)
+- Delete workouts
+- Update workouts
+- Secure protected routes using JWT
+- Persistent login using localStorage
+- Clean and responsive UI
 
-git clone https://github.com/ayush99-ai/workout_buddy.git
+##  Tech Stack
 
-## Backend Setup
+Frontend:
+- React.js
+- Context API
+- CSS
 
-Navigate to backend folder:
+Backend:
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT (Authentication)
+- bcrypt.js
 
+## Setup Instructions
+
+### Clone the repository
+
+git clone https://github.com/ayush99-ai/workout-buddy.git
+cd workout-buddy
+
+
+##  Backend Setup
 cd backend
-
-Install dependencies:
-
 npm install
 
+Create a .env file:
+env
 PORT=4000
-MONGO_URI
+MONGO_URI=mongodb connection string
+SECRET=jwt secret
 
-Run backend server:
+Run backend:
 
 npm run dev
 
-## Frontend Setup
-
-Navigate to frontend folder:
+##  Frontend Setup
 
 cd frontend
-
-Install dependencies:
-
 npm install
-
-Run frontend:
-
 npm start
 
 
-## API Endpoints
+##  API Endpoints
 
- Method 
+Auth Routes:
 
-* POST   
-* GET   
-* DELETE 
+* POST /api/user/signup → Create account
+* POST /api/user/login → Login user
 
+Workout Routes (Protected):
 
-## Author
+* GET /api/workouts → Get all workouts
+* GET /api/workouts/:id → Get single workout
+* POST /api/workouts → Create workout
+* DELETE /api/workouts/:id → Delete workout
+* PATCH /api/workouts/:id → Update workout
 
-Ayush Pardeshi
+##  Author
+
+Made by Ayush Pardeshi
+GitHub: [https://github.com/ayush99-ai/]
